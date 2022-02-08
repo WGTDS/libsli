@@ -61,9 +61,14 @@
 
 static u8 *_process_yaz0( u8 *src, u8 **dst )
 {
-  u32  word, declen, dsp, qty, flags;
-  u8  *dest, *prev;
-  i32  sign;
+  u32 word;
+  u32 declen;
+  u32 dsp;
+  u32 qty;
+  u32 flags;
+  u8 *dest;
+  u8 *prev;
+  i32 sign;
 
   word = _swap32( *(u32 *)src );
 
