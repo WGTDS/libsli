@@ -1,0 +1,38 @@
+Nintendo Entertainment Analysis and Development
+Lempel-Ziv SLI Zip Compression
+
+Overview:
+The SLI algorithm is a solution devised by Nintendo's Research and
+Development branch No. 4 to enhance the LZSS algorithm's capabilities
+for texture and vertex data used by their software titles.
+Initially, the encoded data had been strategically structured for execution
+efficiency on their target platform in the mid-nineties: The Nintendo 64.
+Officially, there are two known revisions and three distinct structures of
+encoded SLI data.
+
+Revisions:
+[Mario] - Dictionary word sizes mirror LZSS' length range of 3-18 bytes.
+I.D. - 0x4D494F30 (MIO0) -or- 0x534D53523030 (SMSR00)
+Formats - Grouped -or- Tabled
+[Zelda] - The predecessor was upgraded to support a range of 3-273 bytes.
+I.D. - 0x59617930 (Yay0) -or- 0x59617A30 (Yaz0)
+Formats - Tabled -or- Interleaved
+
+Significance:
+The N64 uses a variant of the MIPS R4300i CPU, a VR4300 from NEC of Japan,
+which despite its performance capabilities in that era, it will suffer
+greatly from unaligned load operations (special instructions exist for
+this situation, but at the cost of performance).
+EAD's solution was to structure the encoded data in such a way that load
+operations interface with sections which are aligned for their respective
+breadths, so that the decoding process is capable of executing with utmost
+efficiency as specified in their modus operandi.
+The Grouped format stores 16-bit HalfWords and Octets in two groups where
+the HalfWords comprise Bitflags and Dictionaries.
+The Tabled format stores 32-bit Words, 16-bit HalfWords, and Octets in three
+delegated partitions of Bitflags, Dictionaries, and Literals; respectively.
+At the expense of alignment, the Unused bits effectively serve as padding.
+Towards the end of the N64's lifecycle, a formatted octet stream of
+Interleaved coded information had debuted in a few titles before being the
+final de-facto format that has been in use ever since while the other
+formats were retired.
