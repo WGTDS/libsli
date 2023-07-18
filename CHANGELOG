@@ -1,0 +1,36 @@
+#############################################################################
+
+    Change Log:
+
+    [2023/07/17]
+        Updated Revision [v1.01]
+            [Support]
+                - SMSR00
+                - Yaz0
+                + Rvl0
+            [Notes]
+                After nearly two years of neglect, this software
+                has recevied an overhaul in terms of convenience,
+                as well as, addressing some issues that crept
+                into the accuracy of encoded data header info.
+
+                On the other hand, support for the SMSR00 and Yaz0
+                formats have been removed for the time being while
+                the addition of an unofficial format, Rvl0, has
+                been included in this revision.
+
+                SMSR00 is a unique format that's only used in one
+                game whereas Yaz0 has seen use since the days of
+                Ocarina of Time, Majora's Mask, and Animal Forest -
+                the latter format being an interleaved variation
+                of Yay0.
+
+    [2021/11/27]
+        Initial Revision [v1.00]
+            [Support]
+                + MIO0
+                + SMSR00
+                + Yay0
+                + Yaz0
+
+#############################################################################
