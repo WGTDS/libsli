@@ -773,8 +773,6 @@ static void decode(u8 *src, u8 *srcz, FILE *ofile)
                 do {
                     *dstp++ = *p++;
                 } while (--l);
-
-                dstp = &dstp[l];
             }
             else {
                 *dstp++ = *b++;
