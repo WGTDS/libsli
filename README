@@ -1,0 +1,58 @@
+#############################################################################
+
+    Lib SLI v1.02
+
+    "White Guy That Don't Smile"
+    2023/07/31, Monday, July 31st; 1222 HOURS
+
+#############################################################################
+
+    DISCLAIMER
+
+    This code segment has been both procured and cross-referenced
+    through the use of decompilers/disassemblers, and modified/adapted
+    to better suit the implementation of this library.
+
+    The sampled executable binary, "sliencw11.exe", was reverse-software
+    engineered using "Ghidra" and the x86 decompiler, "Snowman".
+
+    "sliencw11.exe" is an encoder for version 1.10 of the SLI format,
+    "Yay0", and is a part of the Nintendo 64 SDK.
+
+    Additionally, the SLI format is to be regarded as the intellectual
+    property of << Nintendo EAD >> and << "Melody-Yoshi" >>.
+
+#############################################################################
+
+    PURPOSE
+
+    The software "lzsz.c" is primarily designed for use with
+    Little Endian host systems (Intel/AMD), and will produce
+    Big Endian data suitable for target systems (N64, GCN, and Wii).
+
+#############################################################################
+
+    Compiler Flags:
+        -std=c99
+        -Wall
+        -Wextra
+        -Wpedantic
+        -Werror
+        -Os
+        -s
+
+#############################################################################
+
+    Formats Supported:
+        (Official)
+            MIO0 "Mario"
+            SMSR00 "Mario 2"
+            Yay0 "Zelda"
+            Yaz0 "Zelda 2"
+        (Unofficial*)
+            Rvl0 "Revolution"
+
+    * This extension was observed and borrowed from the Revolution SDK Tool
+    "ntcompress", but uses the more efficient SLI algorithm instead.
+
+#############################################################################
